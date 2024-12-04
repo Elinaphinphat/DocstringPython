@@ -23,14 +23,14 @@ class Order:
         """
         return self.__items 
     
-    def add_item(self, drink):
+    def add_item(self, item):
         """
         This adds drinks to to the order using append.
 
         Args:
             drink (Drink): Drink item chosen to be added.
         """
-        self.__items.append(drink) 
+        self.__items.append(item) 
 
     def get_total(self):
         """
@@ -39,7 +39,7 @@ class Order:
         Returns:
             float: Total price of the order.
         """
-        total = sum(drink.get_total for drink in self.__items)
+        total = sum(item.get_total() for item in self.__items)
         return total
 
     def get_total_with_tax(self):
@@ -62,9 +62,6 @@ class Order:
         """
         num_items = len(self.__items)
         return f"Item Total: {num_items}"
-
-    def get_total(self):
-        return sum(drink.get_total() for drink in self.__items)
 
     def get_receipt(self):
         """
