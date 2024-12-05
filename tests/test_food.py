@@ -3,7 +3,7 @@ Unit testing for the Food Class.
 """
 
 import unittest # Imports the unittest module for making tests.
-from food import Food # Food class imported from the food module.
+from module.food import Food # Food class imported from the food module.
 
 class TestFood(unittest.TestCase):
     """

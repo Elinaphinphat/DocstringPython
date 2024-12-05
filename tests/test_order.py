@@ -3,8 +3,8 @@ Unit testing for the Order Class.
 """
 
 import unittest # Imports the unittest module for making tests.
-from order import Order # Imports the order class from the Order Module.
-from drink import Drink # Imports the drink class from the Drink Module.
+from module.order import Order # Imports the order class from the Order Module.
+from module.drink import Drink # Imports the drink class from the Drink Module.
 
 class TestOrder(unittest.TestCase):
     """

@@ -3,7 +3,7 @@ Unit tests for the Drink class.
 """
 
 import unittest # Imports from unittest for making tests.
-from drink import Drink # Imports the drink class from the Drink Module.
+from module.drink import Drink # Imports the drink class from the Drink Module.
 
 class TestDrink(unittest.TestCase):
     """

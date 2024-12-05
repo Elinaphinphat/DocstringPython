@@ -1,6 +1,7 @@
-from drink import Drink # Drink class imported from the drink module.
-from order import Order # Order class imported from the order module.
-from food import Food # Food class imported from the food module.
+from module.drink import Drink # Drink class imported from the drink module.
+from module.order import Order # Order class imported from the order module.
+from module.food import Food # Food class imported from the food module.
+from module.ice_storm import IceStorm
 
 drink1 = Drink(base='sprite', price=3.50, size='small') 
 # First drink object is created with the base, price, and size.
@@ -23,13 +24,17 @@ food2 = Food(type='nacho chips') # Added nacho chips which should be $1.90.
 food1.add_topping('whipped cream') 
 food2.add_topping('whipped cream')
 
+ice_storm1 = IceStorm(flavor="mint chocolate chip") # Main flavor is mint chocolate chip.
+ice_storm1.add_topping("dig dogs") # dig dogs topping on the side.
+ice_storm1.add_topping("pecans") # pecans topping on the side.
 
 
 order = Order() # Creates an order object for drinks to be added to.
 order.add_item(drink1) # Drink1 added to the order.
 order.add_item(drink2) # Drink 2 added to the order.
-order.add_item(food1)
-order.add_item(food2)
+order.add_item(food1) # food 1 added to the order.
+order.add_item(food2) # food 2 added to the order.
+order.add_item(ice_storm1) # ice_storm 1 added to the order.
 
 print("Item Order:") 
 for item in order.get_items():

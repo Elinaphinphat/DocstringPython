@@ -21,7 +21,7 @@ class Order:
         Returns:
             List: The list of drinks items in the order.
         """
-        return self.__items 
+        return self.__items
     
     def add_item(self, item):
         """
@@ -30,7 +30,7 @@ class Order:
         Args:
             drink (Drink): Drink item chosen to be added.
         """
-        self.__items.append(item) 
+        self.__items.append(item)
 
     def get_total(self):
         """
@@ -60,7 +60,7 @@ class Order:
         Returns:
             str: The total amount of items.
         """
-        num_items = len(self.__items)
+        num_items = len(self.__items) 
         return f"Item Total: {num_items}"
 
     def get_receipt(self):
@@ -78,8 +78,9 @@ class Order:
             'items': receipt,
             'num_items': len(self.__items),
             'total_before_tax': f"${total:.2f}",
-            'tax': f"${(total_with_tax - total):.2f}",
-            'total_with_tax': f"S{total_with_tax:.2f}"
+            'tax': f"${tax:.2f}",
+            'total_with_tax': f"${total_with_tax:.2f}"
+
         }
 
     def remove_item(self, index):
